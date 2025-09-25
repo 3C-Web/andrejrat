@@ -6,37 +6,29 @@
   <title>Andrej Rat – Car Competence Center</title>
   <style>
     :root{
-      --bg:#f7f7f9;
+      --bg:#ffffff;            /* pure white background */
       --fg:#1f2328;
       --muted:#6b7280;
       --btn:#ffffff;
       --btn-border:#e5e7eb;
-      --btn-hover:#f3f4f6;
+      --btn-hover:#f8fafc;
       --accent:#2563eb;
       --shadow:0 8px 24px rgba(0,0,0,.06);
       --radius:16px;
-    }
-    @media (prefers-color-scheme: dark){
-      :root{
-        --bg:#0b0f14; --fg:#e5e7eb; --muted:#9aa3af;
-        --btn:#111827; --btn-border:#1f2937; --btn-hover:#162233;
-        --accent:#60a5fa;
-      }
     }
     *{box-sizing:border-box}
     body{
       margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
       background:var(--bg); color:var(--fg); font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
     }
-    .card{
-      width:min(92vw,520px); background:#fff0; padding:24px; text-align:center;
-    }
+    .card{ width:min(92vw,520px); padding:24px; text-align:center }
     .logo{ width:160px; height:auto; margin:0 auto 18px; display:block }
     h1{ margin:0; font-size:1.8rem; font-weight:800 }
-    h2{ margin:6px 0 18px; font-size:1.1rem; color:var(--muted); font-weight:600 }
-    .grid{
-      display:grid; gap:12px; margin-top:8px;
-    }
+    /* NEW role line under the name */
+    .role{ margin:6px 0 4px; font-size:1.15rem; font-weight:700; color:#374151 }
+    .company{ margin:0 0 18px; font-size:1.05rem; color:var(--muted); font-weight:600 }
+
+    .grid{ display:grid; gap:12px; margin-top:8px }
     .btn{
       display:flex; align-items:center; gap:12px;
       padding:14px 16px; border-radius:var(--radius);
@@ -44,47 +36,25 @@
       text-decoration:none; color:var(--fg); box-shadow:var(--shadow);
       transition:background .15s ease, transform .04s ease;
     }
-    .btn:active{ transform:translateY(1px) }
     .btn:hover{ background:var(--btn-hover) }
-    .btn .ico{ width:22px; height:22px; display:grid; place-items:center; }
-    .btn .txt{ font-size:1.02rem; font-weight:600 }
-    .small{ margin-top:18px; font-size:.92rem; color:var(--muted) }
-    .accent{ color:var(--accent) }
+    .btn:active{ transform:translateY(1px) }
+    .ico{ width:22px; height:22px; display:grid; place-items:center }
+    .txt{ font-size:1.02rem; font-weight:600 }
   </style>
 </head>
 <body>
   <main class="card">
     <img src="logo.png" alt="Logo Car Competence Center" class="logo" />
     <h1>Andrej Rat</h1>
-    <h2>Car Competence Center</h2>
+    <div class="role">Administration &amp; Koordination</div>
+    <div class="company">Car Competence Center</div>
 
     <div class="grid">
-      <!-- PHONE -->
-      <a class="btn" href="tel:+4917655081412">
-        <span class="ico">📞</span>
-        <span class="txt">0176 5508 1412</span>
-      </a>
-
-      <!-- EMAIL -->
-      <a class="btn" href="mailto:a.rat@3c-ulm.de">
-        <span class="ico">✉️</span>
-        <span class="txt">a.rat@3c-ulm.de</span>
-      </a>
-
-      <!-- WEBSITE -->
-      <a class="btn" href="https://3c-ulm.de/" target="_blank" rel="noopener">
-        <span class="ico">🌐</span>
-        <span class="txt">https://3c-ulm.de/</span>
-      </a>
-
-      <!-- ADDRESS (opens maps) -->
-      <a class="btn" href="https://maps.google.com/?q=Graf-Arco-Stra%C3%9Fe%204%2C%2089079%20Ulm%20Donautal" target="_blank" rel="noopener">
-        <span class="ico">📍</span>
-        <span class="txt">Graf-Arco-Straße 4, 89079 Ulm Donautal</span>
-      </a>
+      <a class="btn" href="tel:+4917655081412"><span class="ico">📞</span><span class="txt">0176 5508 1412</span></a>
+      <a class="btn" href="mailto:a.rat@3c-ulm.de"><span class="ico">✉️</span><span class="txt">a.rat@3c-ulm.de</span></a>
+      <a class="btn" href="https://3c-ulm.de/" target="_blank" rel="noopener"><span class="ico">🌐</span><span class="txt">https://3c-ulm.de/</span></a>
+      <a class="btn" href="https://maps.google.com/?q=Graf-Arco-Stra%C3%9Fe%204%2C%2089079%20Ulm%20Donautal" target="_blank" rel="noopener"><span class="ico">📍</span><span class="txt">Graf-Arco-Straße 4, 89079 Ulm Donautal</span></a>
     </div>
-
-    <p class="small">Tip: add this page to your phone’s home screen for 1-tap access. <span class="accent">iOS</span>: Share → “Zum Home-Bildschirm”. <span class="accent">Android</span>: Menu → “App installieren”.</p>
   </main>
 </body>
 </html>
