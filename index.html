@@ -6,7 +6,7 @@
   <title>Andrej Rat – Car Competence Center</title>
   <style>
     :root{
-      --bg:#ffffff;            /* pure white background */
+      --bg:#ffffff;
       --fg:#1f2328;
       --muted:#6b7280;
       --btn:#ffffff;
@@ -15,6 +15,7 @@
       --accent:#2563eb;
       --shadow:0 8px 24px rgba(0,0,0,.06);
       --radius:16px;
+      --anthrazit:#2F2F2F; /* header color */
     }
     *{box-sizing:border-box}
     body{
@@ -23,9 +24,9 @@
     }
     .card{ width:min(92vw,520px); padding:24px; text-align:center }
     .logo{ width:160px; height:auto; margin:0 auto 18px; display:block }
-    h1{ margin:0; font-size:1.8rem; font-weight:800 }
-    /* NEW role line under the name */
-    .role{ margin:6px 0 4px; font-size:1.15rem; font-weight:700; color:#374151 }
+
+    h1{ margin:0; font-size:1.8rem; font-weight:800; color:var(--anthrazit) }
+    .role{ margin:2px 0 8px; font-size:1rem; font-weight:600; color:#374151 }  /* smaller + closer */
     .company{ margin:0 0 18px; font-size:1.05rem; color:var(--muted); font-weight:600 }
 
     .grid{ display:grid; gap:12px; margin-top:8px }
@@ -53,7 +54,9 @@
       <a class="btn" href="tel:+4917655081412"><span class="ico">📞</span><span class="txt">0176 5508 1412</span></a>
       <a class="btn" href="mailto:a.rat@3c-ulm.de"><span class="ico">✉️</span><span class="txt">a.rat@3c-ulm.de</span></a>
       <a class="btn" href="https://3c-ulm.de/" target="_blank" rel="noopener"><span class="ico">🌐</span><span class="txt">https://3c-ulm.de/</span></a>
-      <a class="btn" href="https://maps.google.com/?q=Graf-Arco-Stra%C3%9Fe%204%2C%2089079%20Ulm%20Donautal" target="_blank" rel="noopener"><span class="ico">📍</span><span class="txt">Graf-Arco-Straße 4, 89079 Ulm Donautal</span></a>
+      <a class="btn" href="https://maps.google.com/?q=Graf-Arco-Stra%C3%9Fe%204%2C%2089079%20Ulm%20Donautal" target="_blank" rel="noopener">
+        <span class="ico">📍</span><span class="txt">Graf-Arco-Straße 4, 89079 Ulm Donautal</span>
+      </a>
     </div>
   </main>
 </body>
