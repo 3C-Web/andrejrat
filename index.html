@@ -21,6 +21,7 @@
       --shadow:0 8px 24px rgba(0,0,0,.06);
       --radius:16px;
       --anthrazit:#2F2F2F;
+      --line:#5d9c8a; /* teal line color */
     }
 
     *{box-sizing:border-box}
@@ -62,19 +63,31 @@
     }
 
     .role {
-      margin:-6px 0 24px; 
+      margin:-6px 0 20px;
       font-size:1.05rem;
       font-weight:500;
       color:#374151;
     }
 
-    /* Divider line style */
+    /* ✅ Teal divider line */
     .divider {
-      width:85%;
-      max-width:420px;
-      height:auto;
-      margin:0 auto 32px;
-      display:block;
+      position: relative;
+      width: 85%;
+      height: 3px;
+      background: var(--line);
+      margin: 0 auto 35px;
+      border-radius: 2px;
+    }
+
+    .divider::after {
+      content: "";
+      position: absolute;
+      right: 12%;
+      top: 0;
+      width: 12px;
+      height: 3px;
+      background: var(--line);
+      transform: skewX(-25deg);
     }
 
     .grid {
@@ -131,8 +144,8 @@
     <h1>Andrej Rat</h1>
     <div class="role">Administration & Koordination</div>
 
-    <!-- ✅ Added divider line -->
-    <img src="line.png" alt="Divider Line" class="divider" />
+    <!-- ✅ Added CSS divider line -->
+    <div class="divider"></div>
 
     <div class="grid">
       <!-- Phone -->
