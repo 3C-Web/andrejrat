@@ -21,7 +21,7 @@
       --shadow:0 8px 24px rgba(0,0,0,.06);
       --radius:16px;
       --anthrazit:#2F2F2F;
-      --icon:#4b9a89; /* consistent icon color */
+      --icon:#4b9a89; /* icon color */
     }
 
     *{box-sizing:border-box}
@@ -92,14 +92,8 @@
       text-align:left;
     }
 
-    .btn:hover {
-      background:var(--btn-hover);
-      border-color:#dfe3e8;
-    }
-
-    .btn:active {
-      transform:translateY(1px);
-    }
+    .btn:hover { background:var(--btn-hover); border-color:#dfe3e8; }
+    .btn:active { transform:translateY(1px); }
 
     .ico {
       color:var(--icon);
@@ -109,10 +103,10 @@
       place-items:center;
     }
 
-    .ico svg {
-      width:22px;
-      height:22px;
-      fill:currentColor;
+    .ico svg{
+      width:22px; height:22px;
+      stroke:currentColor; fill:none;
+      stroke-width:2; stroke-linecap:round; stroke-linejoin:round;
       display:block;
     }
 
@@ -134,8 +128,9 @@
       <!-- Phone -->
       <a class="btn" href="tel:+4917655081412">
         <span class="ico" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="M21 16.5c0 .5-.18 1-.52 1.36l-2.2 2.2a2 2 0 0 1-2.03.5c-2.1-.68-4.9-2.45-7.25-4.8S4.39 11.85 3.7 9.77a2 2 0 0 1 .5-2.03l2.2-2.2A1.93 1.93 0 0 1 7.76 5c.3 0 .6.07.86.2l2.1 1.02c.64.31.98 1.02.83 1.71l-.46 2.1a.9.9 0 0 0 .24.83l3.35 3.35c.23.23.56.32.88.24l2.1-.46a1.6 1.6 0 0 1 1.7.83l1.02 2.1c.12.26.2.56.2.86Z"/>
+          <!-- phone (lucide/feather style) -->
+          <svg viewBox="0 0 24 24" role="img" aria-label="Telefon">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.9 19.9 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.9 19.9 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.3 1.77.57 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.09a2 2 0 0 1 2.11-.45c.83.27 1.7.45 2.6.57A2 2 0 0 1 22 16.92Z"/>
           </svg>
         </span>
         <span class="txt">+49 176 5508 1412</span>
@@ -144,8 +139,10 @@
       <!-- Email -->
       <a class="btn" href="mailto:a.rat@3c-ulm.de">
         <span class="ico" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 3.2-8 5.1-8-5.1V6h16v1.2Zm0 2.3-7.44 4.73a2 2 0 0 1-2.12 0L3 9.5V18h18V9.5Z"/>
+          <!-- mail -->
+          <svg viewBox="0 0 24 24" role="img" aria-label="E-Mail">
+            <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+            <path d="M3 7l9 6 9-6"></path>
           </svg>
         </span>
         <span class="txt">a.rat@3c-ulm.de</span>
@@ -154,8 +151,12 @@
       <!-- Website -->
       <a class="btn" href="https://3c-ulm.de/" target="_blank" rel="noopener">
         <span class="ico" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.92 6h-3.02a15 15 0 0 0-1.7-3.6A8 8 0 0 1 18.92 8ZM12 4c.9 1.1 1.64 2.45 2.18 4H9.82C10.36 6.45 11.1 5.1 12 4ZM5.08 8a8 8 0 0 1 3.72-3.6A15 15 0 0 0 7.1 8H5.08ZM4 12c0-.7.07-1.37.2-2h3.2a22 22 0 0 0 0 4H4.2c-.13-.63-.2-1.3-.2-2Zm1.08 4H7.1c.4 1.3.95 2.5 1.7 3.6A8 8 0 0 1 5.08 16Zm5.82 4c-.9-1.1-1.64-2.45-2.18-4h4.36c-.54 1.55-1.28 2.9-2.18 4Zm2.3-.4c.75-1.1 1.3-2.3 1.7-3.6h3.02A8 8 0 0 1 13.2 19.6ZM16.6 12a20 20 0 0 1 0-4h3.2c.13.63.2 1.3.2 2s-.07 1.37-.2 2h-3.2Z"/>
+          <!-- globe -->
+          <svg viewBox="0 0 24 24" role="img" aria-label="Webseite">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M2 12h20"></path>
+            <path d="M12 2a15 15 0 0 1 0 20"></path>
+            <path d="M12 2a15 15 0 0 0 0 20"></path>
           </svg>
         </span>
         <span class="txt">3c-ulm.de</span>
