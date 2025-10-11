@@ -30,7 +30,7 @@
       display:flex;
       align-items:flex-start; /* ✅ moved content higher */
       justify-content:center;
-      padding-top:50px; /* ✅ small top margin */
+      padding-top:50px; /* ✅ top spacing */
       background:var(--bg);
       color:var(--fg);
       font-family:"Urbanist", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -72,7 +72,7 @@
     }
 
     .subrole {
-      margin:0 0 40px; /* ✅ added bottom margin for spacing before buttons */
+      margin:0 0 40px; /* ✅ spacing before buttons */
       font-size:0.78rem;
       font-weight:500;
       color:#4b5563;
@@ -196,13 +196,11 @@
       </a>
     </div>
 
-    <!-- ✅ ISO Certificate (clickable) -->
-<div class="iso-badge">
-  <a href="https://www.din.de/de/wdc-beuth:din21:235671251" target="_blank" rel="noopener" title="DIN Beuth ISO Seite">
-    <img src="iso.png" alt="ISO 9001 Zertifikat">
-  </a>
-</div>
-    
+    <!-- ✅ ISO Certificate (non-clickable) -->
+    <div class="iso-badge">
+      <img src="iso.png" alt="ISO 9001 Zertifikat">
+    </div>
+
   </main>
 </body>
 </html>
