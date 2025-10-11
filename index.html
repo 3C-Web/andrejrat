@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Andrej Rat – Car Competence Center</title>
 
-  <!-- ✅ Google Fonts: Outfit -->
+  <!-- ✅ Google Fonts: Outfit (with fast preconnects) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -36,20 +38,13 @@
       line-height:1.5;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
+      text-rendering:optimizeLegibility;
+      font-synthesis-weight:none; /* prevent faux bold */
+      font-synthesis-style:none;  /* prevent faux italic */
     }
 
-    .card {
-      width:min(92vw,520px);
-      padding:24px;
-      text-align:center;
-    }
-
-    .logo {
-      width:250px;
-      height:auto;
-      margin:0 auto 50px;
-      display:block;
-    }
+    .card { width:min(92vw,520px); padding:24px; text-align:center; }
+    .logo { width:250px; height:auto; margin:0 auto 50px; display:block; }
 
     h1 {
       margin:-25px 0 0;
@@ -58,68 +53,28 @@
       letter-spacing:.2px;
       font-weight:400;
     }
+    h1 span:first-child { font-weight:500; } /* Andrej - lighter */
+    h1 span:last-child  { font-weight:700; } /* RAT - bold */
 
-    h1 span:first-child {
-      font-weight:500; /* Andrej - lighter */
-    }
+    .role { margin:-6px 0 50px; font-size:1.05rem; font-weight:500; color:#374151; }
 
-    h1 span:last-child {
-      font-weight:700; /* RAT - bold */
-    }
+    .grid { display:grid; gap:14px; margin-top:0; }
 
-    .role {
-      margin:-6px 0 50px; 
-      font-size:1.05rem;
-      font-weight:500;
-      color:#374151;
-    }
-
-    .grid {
-      display:grid;
-      gap:14px;
-      margin-top:0;
-    }
-
-    .btn {
-      display:flex;
-      align-items:center;
-      justify-content:flex-start;
-      gap:12px;
-      padding:16px 18px;
-      border-radius:var(--radius);
-      background:var(--btn);
-      border:1px solid var(--btn-border);
-      text-decoration:none;
-      color:var(--fg);
-      box-shadow:var(--shadow);
+    .btn{
+      display:flex; align-items:center; justify-content:flex-start;
+      gap:12px; padding:16px 18px; border-radius:var(--radius);
+      background:var(--btn); border:1px solid var(--btn-border);
+      text-decoration:none; color:var(--fg); box-shadow:var(--shadow);
       transition:background .15s ease, transform .04s ease, border-color .15s ease;
-      font-weight:500;
-      text-align:left;
+      font-weight:500; text-align:left;
     }
+    .btn:hover{ background:var(--btn-hover); border-color:#dfe3e8; }
+    .btn:active{ transform:translateY(1px); }
 
-    .btn:hover { background:var(--btn-hover); border-color:#dfe3e8; }
-    .btn:active { transform:translateY(1px); }
+    .ico{ color:var(--icon); width:22px; height:22px; display:grid; place-items:center; }
+    .ico svg{ width:22px; height:22px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; display:block; }
 
-    .ico {
-      color:var(--icon);
-      width:22px;
-      height:22px;
-      display:grid;
-      place-items:center;
-    }
-
-    .ico svg{
-      width:22px; height:22px;
-      stroke:currentColor; fill:none;
-      stroke-width:2; stroke-linecap:round; stroke-linejoin:round;
-      display:block;
-    }
-
-    .txt {
-      font-size:1.02rem;
-      font-weight:600;
-      font-variant-numeric:tabular-nums;
-    }
+    .txt{ font-size:1.02rem; font-weight:600; font-variant-numeric:tabular-nums; }
   </style>
 </head>
 <body>
