@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Andrej Rat – Car Competence Center</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- ✅ Google Fonts: Outfit -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -18,6 +19,7 @@
       --radius:16px;
       --anthrazit:#2F2F2F;
       --icon:#4b9a89;
+      --line:#d4d4d4;
     }
 
     *{box-sizing:border-box}
@@ -26,8 +28,9 @@
       margin:0;
       min-height:100vh;
       display:flex;
-      align-items:center;
+      align-items:flex-start; /* ✅ moved content higher */
       justify-content:center;
+      padding-top:15px; /* ✅ small top margin */
       background:var(--bg);
       color:var(--fg);
       font-family:"Urbanist", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -46,37 +49,42 @@
     .logo {
       width:250px;
       height:auto;
-      margin:0 auto 50px;
+      margin:0 auto 1px;
       display:block;
     }
 
     h1 {
-      margin:-25px 0 0;
+      margin:20px 0 0;
       font-size:1.9rem;
       color:var(--anthrazit);
       letter-spacing:.2px;
       font-weight:400;
     }
 
-    h1 span:first-child {
-      font-weight:500; /* Andrej - lighter */
-    }
-
-    h1 span:last-child {
-      font-weight:700; /* RAT - bold */
-    }
+    h1 span:first-child { font-weight:500; }
+    h1 span:last-child { font-weight:700; }
 
     .role {
-      margin:-6px 0 50px; 
+      margin:-5px 0 0;
       font-size:1.05rem;
       font-weight:500;
       color:#374151;
     }
 
+    .subrole {
+      margin:20px 0 8px;
+      font-size:0.78rem;
+      font-weight:500;
+      color:#4b5563;
+      line-height:1.25;
+      letter-spacing:-0.2px;
+      white-space:nowrap;
+    }
+
     .grid {
       display:grid;
-      gap:14px;
-      margin-top:0;
+      gap:12px;
+      margin-top:8px;
     }
 
     .btn {
@@ -84,7 +92,7 @@
       align-items:center;
       justify-content:flex-start;
       gap:12px;
-      padding:16px 18px;
+      padding:14px 16px;
       border-radius:var(--radius);
       background:var(--btn);
       border:1px solid var(--btn-border);
@@ -100,17 +108,21 @@
     .btn:active { transform:translateY(1px); }
 
     .ico {
-      color:var(--icon);
       width:22px;
       height:22px;
       display:grid;
       place-items:center;
+      color:var(--icon);
     }
 
-    .ico svg{
-      width:22px; height:22px;
-      stroke:currentColor; fill:none;
-      stroke-width:2; stroke-linecap:round; stroke-linejoin:round;
+    .ico svg {
+      width:22px;
+      height:22px;
+      stroke:currentColor;
+      fill:none;
+      stroke-width:2;
+      stroke-linecap:round;
+      stroke-linejoin:round;
       display:block;
     }
 
@@ -118,6 +130,25 @@
       font-size:1.02rem;
       font-weight:600;
       font-variant-numeric:tabular-nums;
+    }
+
+    /* ✅ ISO badge styling */
+    .iso-badge {
+      margin-top:36px;
+      display:flex;
+      justify-content:center;
+      margin-bottom:20px;
+    }
+
+    .iso-badge img {
+      width:130px;   /* ✅ larger badge */
+      height:auto;
+      opacity:0.98;
+    }
+
+    @media (max-width:380px) {
+      .subrole { font-size:0.75rem; }
+      .iso-badge img { width:110px; }
     }
   </style>
 </head>
@@ -162,6 +193,11 @@
         </span>
         <span class="txt">3c-ulm.de</span>
       </a>
+    </div>
+
+    <!-- ✅ ISO Certificate -->
+    <div class="iso-badge">
+      <img src="iso.png" alt="ISO 9001 Zertifikat">
     </div>
   </main>
 </body>
